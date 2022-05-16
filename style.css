@@ -34,3 +34,17 @@ a {
   border-radius: 4px;
   text-decoration: none;
 }
+
+/* padrão generico de funções pra imagem */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+div {
+  width: 300px;
+}
+
+.pequena {
+  width: 150px;
+}
