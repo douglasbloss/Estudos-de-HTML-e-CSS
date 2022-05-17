@@ -31,7 +31,16 @@ h2 {
 
 .grid {
   display: grid;
-  /* fr é uma unidade FRACIONADA ou seja, nao sei, mas ele distribui de forma igual igual */
-  grid-template-columns: 1fr 1fr;
+  /* cada valor de tamanho aqui simboliza uma linha ed columa dentro de grid-template-columns */
+  grid-template-columns: 300px 300px;
   gap: 20px;
+  /* para justify e align o conteúdo, precisa ter espaço sobrando, por isso nao funciona com medidas de "fr" ou com altura quando ela está no automático, pois o elemento termina no fim d página (a nao ser que deseje colocar um height superior ao dos elementos*/
+
+  /* Alinha/Distribui o conteúdo na horizontal */
+  align-content: space-between;
+
+  /* Alinha/Distribui o conteúdo na vertical */
+  justify-content: center;
+
+  /* e place-content é um atalho para os dois de cima*/
 }
