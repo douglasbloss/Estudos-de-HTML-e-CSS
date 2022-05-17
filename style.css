@@ -1,56 +1,37 @@
 body {
   font-family: Arial;
-  margin: 50px;
 }
+
 h1 {
   text-align: center;
 }
 
 h2 {
-  margin: 0px;
+  margin-top: 0px;
 }
+
+.comprar {
+  background: tomato;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* aqui é ótimo para padrão de caixas de itens em site de venda */
 
 .item {
-  background: #111;
-  color: #fff;
-  padding: 30px;
-  margin: 20px;
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  padding: 20px;
   border-radius: 4px;
+  /* display grid modifica completamente como o elemento se comporta, alterando até as disposições de <a href=""></a> */
+  display: grid;
 }
 
-span {
-  color: #febe01;
-}
-
-p {
-  color: #b2b2b2;
-}
-
-a {
-  display: inline-block;
-  background: #febe01;
-  color: #332200;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-/* padrão generico de funções pra imagem */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-div {
-  /* exemplo:  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 40px;
-  margin-left: 40px;
-  margin: 20px 40px; */
-  /* aplica pra todo ele */
-  border: solid black;
-  /* esse serve tanto esquerda quanto direita, e esse aceita a regra do sentido horário como no margin anterior */
-  border-width: 5px 20px;
-  /* mas é possível ir lado por lado especificando assim */
-  border-top: 20px;
+.grid {
+  display: grid;
+  /* fr é uma unidade FRACIONADA ou seja, nao sei, mas ele distribui de forma igual igual */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
