@@ -40,3 +40,17 @@ img {
   max-width: 100%;
   display: block;
 }
+
+div {
+  /* exemplo:  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin: 20px 40px; */
+  /* aplica pra todo ele */
+  border: solid black;
+  /* esse serve tanto esquerda quanto direita, e esse aceita a regra do sentido horário como no margin anterior */
+  border-width: 5px 20px;
+  /* mas é possível ir lado por lado especificando assim */
+  border-top: 20px;
+}
