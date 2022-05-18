@@ -1,31 +1,19 @@
-.flex {
-  /* O flex box sempre vai encaixando o conteúdo ao lado dele, nao precisa delimitar quantidade de colunas ou itens que podem ir ao lado */
-  display: flex;
-  /* Essa joga os elementos para uma nova linha ao invés de criar um scroll lateral */
-  flex-wrap: wrap;
-  gap: 20px;
+.fixo {
+  position: fixed;
+  /* esses top botton left bottom so funcionarao quando tivermos um elemento com position modificada */
+  bottom: 40px;
+  left: 40px;
 }
 
-h2 {
+h1 {
+  border: 2px solid #ccc;
+  padding: 20px 20px 500px 20px;
+}
+
+p {
   background: #e7e7e7;
   border: 1px solid #d7d7d7;
   padding: 20px;
   margin: 0px;
-  /* com basis igual a zero, todos os itens têm o menor tamanho possível baseasdo no maior conteúdo de algum deles (nocaso é o 'Senhor dos Anéis' */
-  /* flex-basis: 0; */
-  /* flex-basis: auto; */
-  /* Com o shrink em zero ele não irá mais quebrar as diminuir o tamanho do elemento/quebrar a palavra */
-  /* flex-shrink: 0; */
-  /* é um atalho para grow 1 shrink 1 e basis 0% */
-  /* flex: 1; */
-}
-
-/* O grid em comparação ao flex é mais FIXO menos FLEXÍVEL. São GRADES. */
-/* Ou seja, sempre pensa nas colunas quando se fala em Grid */
-.grid {
-  margin-top: 60px;
-  display: grid;
-  /* com esse auto-fit ele pode encaixar a quantidade possivel, semelhante a função do .flex */
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-  gap: 20px;
+  font-size: 20px;
 }
