@@ -5,15 +5,24 @@
   left: 40px;
 }
 
-h1 {
+div {
   border: 2px solid #ccc;
-  padding: 20px 20px 500px 20px;
+  margin-top: 40px;
+  padding: 20px 20px 40px 20px;
+  position: relative;
 }
 
-p {
+span {
   background: #e7e7e7;
-  border: 1px solid #d7d7d7;
-  padding: 20px;
-  margin: 0px;
-  font-size: 20px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  /* relative ele mantém o espaço que estava ocupando */
+  /* position: relative; */
+  /* o absolut é como se o elemento nao existisse mais no fluxo da tela */
+  position: absolute;
+  /* e o posicionamento de top/right/etc funciona, mas agora é em relação a tela e nao ao html */
+  /* inclusive os elementos irão se sobrepor */
+  /* para ele respeitar a posição do elemento pai, precisa dar position:relative ao que está compodo ele, ou seja, o pai que é a <div> */
+  top: 0 px;
 }
+/* mas lembrando. isso tudo é pra situações mto específicas, e layout geralmente é feito com flexbox. */
