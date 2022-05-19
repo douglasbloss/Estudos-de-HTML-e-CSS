@@ -1,33 +1,176 @@
-h1 {
+body {
+  /* faz com que tudo tenha arial senao helvetica senao qualquer sanserif */
+  font-family: Arial, Helvetica, sans-serif;
+  /* reset */
   margin: 0px;
-  padding: 10px;
-  background: lightblue;
+  /* toda a página com um fundo um pouco mais escuro*/
+  background: #f7f7f7;
+  /* coloca em grid todo o documento */
+  display: grid;
+  /* espaçamento entre os GRANDES blocos pertencentes ao bod, e não aos elementos dentro dos elementos. */
+  gap: 60px;
+  /* centraliza tudo */
+  justify-items: center;
+  /* separa to cache de navegador o texto */
+  margin-top: 60px;
 }
 
-.index1 {
+img {
+  /* a princípio é para nao extourar o elemento*/
+  max-width: 100%;
+  /* garante que o item fique em bloco, ou seja, não deixa outros itens ao lado */
+  display: block;
+}
+
+/* tirar o sublinhado */
+a {
+  text-decoration: none;
+}
+
+/* o reset padrao */
+p,
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
+p {
+  font-size: 20px;
+  /* distanciar as letras */
+  line-height: 1.3;
+}
+
+.menu {
+  /* flex para distribuir por igual na tela */
+  display: flex;
+  /* distancia entre os itens dentro de .menu */
+  gap: 20px;
+  /* wrap para quebrar as linhas */
+  flex-wrap: wrap;
+  /* para justificar os itens mesmo quando quebrarem, ao centro */
+  justify-content: center;
+}
+
+/* todos os <a> dentro de .menu */
+.menu a {
+  background: #fff;
+  /* criar area de cada botao 15 pra cima e baixo, 30 pra direita e esquerda */
+  padding: 15px 30px;
+  /* arredondamento das bordas */
+  border-radius: 4px;
+  /* cor do texto */
+  color: #000000;
+  /* transforma todo texto em maiúscula */
+  text-transform: uppercase;
+}
+
+.conteudo {
+  /* usa a distribuição em grids */
+  display: grid;
+  /* dois grids de tamanhos iguais */
+  /* como tem 4 blocos, serão 2 em cima e 2 embaixo */
+  grid-template-columns: 1fr 1fr;
+  /* faz com que os itens não aumentem infinitamente. dá um limite ao conteúdo */
+  max-width: 1000px;
+}
+
+.introducao {
+  /* tom mais claro do que o fundo do body */
+  background: #fff;
+  /* distancia do item das suas próprias bordas */
+  padding: 40px;
+  /* alinha apenas o texto para a direita do item */
+  text-align: right;
+  /* feito isso para colocar o .detalhe */
   position: relative;
-  background: greenyellow;
-  /* com isso ele passa o elemento que teria maior prioridade, sobrepondo o 3 */
-  top: 30px;
-  /* mas mexendo com profundidade, dá para alterar isso */
-  /* z-index: -1; */
+  /* colocar assim para os blocos não subirem um em cima do outro, ou seja, não se comportarem mais como display:inline que é o padrão desse elemento */
+  display: grid;
+  /* alinha todos os itens do elemento todo */
+  align-content: center;
+  /* separa os itens dentro um do outro */
+  gap: 20px;
+  /* força os itens a ficarem todos ao lado direito, ou seja, o botao fica pequenininho como deve ser */
+  justify-items: end;
 }
 
-.index2 {
+.botao {
+  /* cor ao redor do botão estipulado pelo padding */
+  background: #e21;
+  /* cor do texto */
+  color: #fff;
+  /* tamanho do botao */
+  padding: 15px 30px;
+  /* arredondamento das bordas */
+  border-radius: 4px;
+  /* texto em caps */
+  text-transform: uppercase;
+}
+
+/* fazer um desenho totalmente estético */
+.detalhe {
+  /* proporções do elemento */
+  width: 60px;
+  height: 4px;
+  /* cor do elemento */
+  background: #e21;
+  /* para fazer ele aprecer, já que é um <span>, mas caso o elemento pai seja um grid/display:block nao precisa dizer novamente que ele tbm é block, seria redundante */
+  /* display: inline-block; */
+  /* para poder posicionar relativo ao body, a não ser que o elemento pai (introducao) tenha um position relative */
   position: absolute;
-  background: lightcoral;
-  /* mas agora esse está acima do index1 SOMENTE por conta da posição no HTML, nao tem nada relacionado ao CSS como position abs ou rel*/
-  /* a exemplo disso é mudar a posição com alt+arrow-up e verificar a sobreposição */
-  top: 60px;
-  z-index: 0;
-
-  /* sempre é possivel alterar para 
-  z-index: 1, para garantir que esse elemento estará sempre acima dos outros de valor menor
-  z-index: 999999999 é exemplo usado para manter o elemento no topo sempre
-  z-index funciona também SOMENTE se tiver com position alterada*/
+  /* posicionamento do detalhe */
+  top: 30px;
+  right: -30px;
 }
 
-.index3 {
-  /* position: relative; */
-  z-index: 99999999;
+.subtitulo {
+  /* texto grandao */
+  font-size: 64px;
+  /* texto em caps */
+  text-transform: uppercase;
+  /* cor preta mas clarinha */
+  color: rgba(0, 0, 0, 0.2);
+  /* alinhar à direita com a estética da página */
+  text-align: right;
+  /* para descolar descolar do lado */
+  padding: 40px;
+  /* centralizar na quebra */
+  align-self: center;
+}
+
+.vantagens {
+  /* fundo mais claro do body completando o layout da página */
+  background: #fff;
+  /* padding padrao de todos os blocos */
+  padding: 40px;
+}
+
+.vantagens-item {
+  display: grid;
+  /* auto que é para o item ocupar o espaço exato do tamanho existente */
+  grid-template-columns: auto 1fr;
+  /* o primeiro é distância entre as linhas e o segundo é entre as colunas */
+  gap: 10px 20px;
+  padding: 20px;
+}
+
+/* faltou a imagem ao lado do h3, mas é pq nao achei a pasta original com as imagens enfim! */
+
+/* falar diretamente com o p do vantagens-item */
+.vantagens-item p {
+  /* joga todo p para a coluna 2 e deixa tudo o que nao é p em outro lugar */
+  grid-column: 2;
+}
+
+.rodape {
+  /* se deixar só background cor, ele pintará apenas a linha ao redor do item, e nao a linha completa da página, pois lá em body ele está em justicy-items: center, e neste elemento aqui nao queremos isso por questões estéticas */
+  background: #fff;
+  /* como resolve isso? assim: */
+  width: 100%;
+  /* dai precisa alinhar ao centro de volta */
+  text-align: center;
+  /* padding padrão deste layout */
+  padding: 40px;
+  /* se deixar só como nas linhas superiores, vai estourar e criar um scroll lateral pois será width 100%+40px de padding, para resolver isso fazer: */
+  box-sizing: border-box;
 }
