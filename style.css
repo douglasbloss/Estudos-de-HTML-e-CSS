@@ -1,6 +1,5 @@
 /* geralmente a ul virá com muito padding, por contad a formatação padrão */
-ul,
-ol {
+ul {
   padding: 0px;
   margin: 0px;
   /* para retirar os ícones de lista, ou alterar para algum outro */
@@ -8,6 +7,26 @@ ol {
   /* É possível escolher se esse list-style será dentro ou fora do elemento com
   inside ou outside */
   list-style: none;
+  /* para ficar um do lado do outro: display: flex */
+  display: flex;
+  /* é possivel usar gap para separar os elementos na linha flex, mas nem todo navegador aceita */
+  /* então é possível ir na li e separar na margin */
+  gap: 20px;
+}
+
+/* li {
+  margin: 0px 10px;
+} */
+
+a {
+  text-decoration: none;
+  background: #eee;
+  color: #000;
+  /* definir o a para aumentar a área de contato do link */
+  padding: 10px 20px;
+  /* definir o a como elemento de bloco, pois foi apenas o ul que havia sido alterado */
+  /* se não alterar o display, o conteúdo pode acabar vazando para forad o elemento */
+  display: block;
 }
 
 dl,
