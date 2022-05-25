@@ -1,0 +1,16 @@
+/* geralmente a ul virá com muito padding, por contad a formatação padrão */
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+  /* para retirar os ícones de lista, ou alterar para algum outro */
+  /* Ou até mesmo colocar alguma imagem usando list-style: url () */
+  /* É possível escolher se esse list-style será dentro ou fora do elemento com
+  inside ou outside */
+  list-style: none;
+}
+
+dl,
+dd {
+  margin: 0px;
+}
