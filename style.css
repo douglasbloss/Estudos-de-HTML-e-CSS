@@ -1,48 +1,29 @@
-a {
-  text-decoration: none;
-  color: #fff;
-  background: darkblue;
-  /* inline para poder influenciar nos paddings dele */
-  display: inline-block;
-}
+/* viewport height ou vh é o tamanho da altura da tela visível */
+/* viewport width ou vw é o tamanho da largura da tela visível */
 
-p {
-  background: lightblue;
-}
-
-.px {
-  font-size: 32px;
-}
-
-/* por padrão o font-size dos navegadores é de 16px */
-/* html {
-  font-size: 32px;
-  font-size: 200%;
-} */
-
-/* rem é o valor de medida do tamanho referente a raiz, para font-size, 1 rem = 16px */
-.rem {
-  font-size: 2rem;
-  /* padding: 1rem 2rem; */
-}
-
-/* em casos de acessibilidade, do usuário aumentar o tamanho da fonte padrão do navegador
-o rem irá aumentar de acordo com essa mudança, o mesmo não ocorre com a medida de px que é fixa. */
-/* pensaremos em px, mas é bom usar em rem, para dar controle ao usuário, afinal, o rem terá como unidade finl o px, mas variável. */
-
-/* existe também essa unidade de medida, mas é pouco utilizada pois pode confundir, pois ele corresponde ao elemento pai */
-/* neste caso, é a div */
-.em {
-  font-size: 2em;
-}
-
-/* veja no exemplo abaixo */
+/* por padrão irá ocupar 100% do elemento pai, ou seja, irá de ponta a ponta */
 div {
-  font-size: 200%;
+  background: lightblue;
+  /* width: 50vw; */
+  width: 50%;
+  height: 100vh;
+  /* height: 200px; */
+  /* mas note que é diferente ocupar 100% do elemento pai do que ocupar 100% da TELA, que é o caso do vh/vw */
+  /* utilizando o valor de vw ele irá estourar um pouco a tela, pois o body já tem por padrão tem valores de margin de 8px
+  indo além dos 100% de vw e estourando o container*/
 }
 
-/* mas se mexer na página toda, como é o caso do html, o rem também se comportará parecido como o em */
-/* tirando o fato de que o em irá multiplicar 2x mais, ou seja, ele está neste momento em 400% */
-html {
-  font-size: 200%;
+/* para resolver isso, resetar os valores do body */
+body {
+  margin: 0px;
 }
+
+/* vale lembrar que 100 e 50 de vh/vw não significam porentagem, veja abaixo: */
+
+section {
+  width: 200px;
+  background: tomato;
+}
+/* no exemplo acima, a div irá estourar a section, pois o valor de width é de 50vw */
+/* no caso de que ao invés de usar vw, utilizar width de 50%, ele dividiria por igual o valor da section */
+/* pois ler 50% de width, significa que esse elemento terá 50% do tamanho do elemento PAI e não referente ao tamanho de TELA */
