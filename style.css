@@ -1,29 +1,15 @@
-/* viewport height ou vh é o tamanho da altura da tela visível */
-/* viewport width ou vw é o tamanho da largura da tela visível */
-
-/* por padrão irá ocupar 100% do elemento pai, ou seja, irá de ponta a ponta */
-div {
-  background: lightblue;
-  /* width: 50vw; */
-  width: 50%;
-  height: 100vh;
-  /* height: 200px; */
-  /* mas note que é diferente ocupar 100% do elemento pai do que ocupar 100% da TELA, que é o caso do vh/vw */
-  /* utilizando o valor de vw ele irá estourar um pouco a tela, pois o body já tem por padrão tem valores de margin de 8px
-  indo além dos 100% de vw e estourando o container*/
-}
-
-/* para resolver isso, resetar os valores do body */
 body {
   margin: 0px;
 }
 
-/* vale lembrar que 100 e 50 de vh/vw não significam porentagem, veja abaixo: */
-
-section {
-  width: 200px;
-  background: tomato;
+div {
+  background: lightblue;
+  /* caso eu quisesse colocar 1/3 de vw mas ao invés de eu ter que calcular manualmente com os 33,3333vw ou %
+  posso usar a função de calc(100vw / 3);   */
+  /* mas caso eu queira tirar 100px de qualquer tela do meu vw, o calc() funciona tbm */
+  width: calc(100vw - 100px);
+  height: 100vh;
 }
-/* no exemplo acima, a div irá estourar a section, pois o valor de width é de 50vw */
-/* no caso de que ao invés de usar vw, utilizar width de 50%, ele dividiria por igual o valor da section */
-/* pois ler 50% de width, significa que esse elemento terá 50% do tamanho do elemento PAI e não referente ao tamanho de TELA */
+
+/* link para mais outras unidades menos utilizdas */
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
