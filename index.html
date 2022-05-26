@@ -23,6 +23,32 @@ para listas pequenas, como no exemplo abaixo, apenas o <nav> seguido de <a> já 
   </header>
   </nav>
   <main>
+
+    <!-- sempre bom lembrar que html define SEMÂNTICA e não estilo, essa função é do CSS -->
+
+    <!-- blockquote serve para marcar um parágrafo de citação de alguém -->
+    <!-- com o diferencial de que dá para colocar o link de referênia da citação -->
+    <blockquote cite="https://tseliot.com">
+      <p>Não devemos parar de explorar, e o fim de toda nossa exploração será chegar onde começamos e conhecer o lugar pela primeira vez.</p>
+    </blockquote>
+    <p>T. S. Eliot</p>
+
+    <!-- existe outra tag para citação, dessa vez interna, que é o q -->
+    <p>
+      Como já dizia o poeta <q cite="https://www.origamid.com">se HTML está difícil, nem comece com JavaScript.</q>
+    </p>
+
+    <!-- o <cite> serve para referenciar obras -->
+    <p>Eu indico o livro <cite>Mythos</cite> escrito por Stephen Fry</p>
+
+    <!-- tem também o <em> que existe para dar ênfase a uma palavra/termo -->
+    <p><em>Nenhum animal</em> foi maltratado na produçõ deste documentário.</p>
+
+    <!-- existe também a <strong> que serve para marcar uma parte importante do conteúdo -->
+    <p>
+      É importante entender como os frameworks funcionam. Porém <strong>é essencial aprender JavaScript.</strong>
+    </p>
+
     <h2 id="sobrebik">Sobre a Bikcraft</h2>
     <p>Autor: Douglas Bloss </p>
     <!-- unordered list ou seja, lista sem ordem e dentro dela coloa li, list items-->
