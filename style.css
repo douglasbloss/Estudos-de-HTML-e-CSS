@@ -52,5 +52,5 @@ h1 {
 }
 .radial {
   height: 200px;
-  background-image: radial-gradient(blue, red)
+  background-image: radial-gradient(blue, red);
 }
