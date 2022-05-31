@@ -45,3 +45,12 @@ h1 {
   background-image: url("./img/pattern.svg");
   /* background-size: 500px; */
 }
+
+.linear {
+  height: 200px;
+  background-image: linear-gradient(to left, lightblue 10%, lightcoral 20%);
+}
+.radial {
+  height: 200px;
+  background-image: radial-gradient(blue, red)
+}
