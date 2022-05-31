@@ -42,4 +42,6 @@ h1 {
 .pattern {
   height: 300px;
   background-color: lightcoral;
+  background-image: url("./img/pattern.svg");
+  /* background-size: 500px; */
 }
