@@ -18,3 +18,23 @@ p {
   text-shadow: 5px 5px 10x gray;
   letter-spacing: 0.05rem;
 }
+
+.bicicleta {
+  height: 600px;
+  background-color: lightblue;
+  background-image: url("./img/bicicleta.jpg");
+  /* garante que a foto nao se duplique ao fim do espaço */
+  /* nota que ao nao-repetir, a cor de fundo se sobrepõe */
+  background-repeat: no-repeat;
+  /* contain é um dos tamanhos possíveis de escolher, e ele se organiza um pouco melhor */
+  background-size: contain;
+  /* com a centralização do background, ele manterá a imagem de fundo centralizada, cortando-a por igual */
+  background-position: center top;
+  display: flex;
+}
+
+h1 {
+  margin: auto;
+  background: white;
+  padding: 1rem 2rem;
+}
