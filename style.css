@@ -38,3 +38,8 @@ h1 {
   background: white;
   padding: 1rem 2rem;
 }
+
+.pattern {
+  height: 300px;
+  background-color: lightcoral;
+}
