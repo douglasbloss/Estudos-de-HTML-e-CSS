@@ -1,3 +1,44 @@
+a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #caf;
+  color: #217;
+  /* no caso a animação da transição do hover é feita aqui e nao no hover direto */
+  /* transition: 0.3s; */
+}
+
+/* cria-se uma nova linha com o elemento seguido de : e o nome do estado que ele terá */
+/* e qualquer elemento pode ter o estado de hover */
+a:hover {
+  background-color: #adf;
+  color: #147;
+}
+
+/* o focus geralmente é usado para links mesmo, ele interage com o TAB */
+/* por padrão ele cria uma borda no item, que pode ser alterada */
+a:focus {
+  /* background-color: #cfa;
+  color: #371; */
+}
+
+/* interage quando clica nele, e adquire as propriedades do estado */
+a:active {
+  background-color: #ffa;
+  color: #761;
+}
+
+/* exclusivo pra links, ele deixa o registro de que tu ja visitou esse link antes */
+/* e ele tem superioridade de relevante no site acima do que os outros estados*/
+a:visited {
+  /* background-color: #fda;
+  color: #731; */
+}
+
+/* --- espaço --- */
+
 p {
   font-size: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -22,7 +63,7 @@ p {
 .bicicleta {
   height: 600px;
   background-color: lightblue;
-  background-image: url("./img/bicicleta.jpg");
+  /* background-image: url("./img/bicicleta.jpg"); */
   /* garante que a foto nao se duplique ao fim do espaço */
   /* nota que ao nao-repetir, a cor de fundo se sobrepõe */
   background-repeat: no-repeat;
@@ -40,17 +81,17 @@ h1 {
 }
 
 .pattern {
-  height: 300px;
+  /* height: 300px;
   background-color: lightcoral;
-  background-image: url("./img/pattern.svg");
+  background-image: url("./img/pattern.svg"); */
   /* background-size: 500px; */
 }
 
 .linear {
-  height: 200px;
-  background-image: linear-gradient(to left, lightblue 10%, lightcoral 20%);
+  /* height: 200px;
+  background-image: linear-gradient(to left, lightblue 10%, lightcoral 20%); */
 }
 .radial {
-  height: 200px;
-  background-image: radial-gradient(blue, red);
+  /* height: 200px;
+  background-image: radial-gradient(blue, red); */
 }
